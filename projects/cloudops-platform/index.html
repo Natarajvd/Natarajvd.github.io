@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080D17">
+  <meta name="description" content="How Nataraj V. D. solo-built OpsBridge, an internal production cloud operations platform for AWS and Azure documentation, guarded PowerShell tools, and evidence-led AI investigation.">
+  <link rel="canonical" href="https://natarajvd.github.io/projects/cloudops-platform/">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="preload" href="../../assets/fonts/Manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="../../assets/css/case-study.css">
+  <link rel="stylesheet" href="../../assets/css/modern.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="OpsBridge — Cloud Operations &amp; AI Investigation — Nataraj V. D.">
+  <meta property="og:description" content="A solo-built platform connecting cloud documentation, safer operations, and evidence-led AI incident investigation.">
+  <meta property="og:url" content="https://natarajvd.github.io/projects/cloudops-platform/">
+  <meta property="og:image" content="https://natarajvd.github.io/assets/images/social-preview.png">
+  <meta property="og:image:alt" content="Nataraj V. D. — cloud infrastructure, reliable operations, practical automation">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>OpsBridge — Cloud Operations &amp; AI Investigation — Nataraj V. D.</title>
+  <script src="../../assets/js/main.js" defer></script>
+</head>
+<body id="top">
+  <div class="reading-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html"><span class="brand-mark" aria-hidden="true">N<span class="brand-dot">.</span></span><span class="brand-name">Nataraj V. D.</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Case study navigation">
+        <a href="#overview">Overview</a><a href="#platform">Platform</a><a href="#investigation">AI investigation</a><a href="#engineering">Engineering</a><a href="#decisions">Decisions</a>
+      </nav>
+      <button class="explore-trigger" type="button" hidden aria-keyshortcuts="Control+K Meta+K">Explore <kbd>⌘ K</kbd></button>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <section class="case-hero container" aria-labelledby="case-title">
+        <a class="case-back" href="../../index.html#projects"><span aria-hidden="true">←</span> Back to selected projects</a>
+        <p class="eyebrow">Featured case study <span class="case-eyebrow-divider">/</span> Cloud operations + AI</p>
+        <h1 id="case-title">OpsBridge <span>Cloud Operations &amp; AI Investigation.</span></h1>
+        <p class="case-lede">I designed, built, tested, and operated a connected internal platform for a hybrid AWS and Azure environment. It brought infrastructure knowledge, controlled PowerShell tools, and AI-assisted incident investigation into the team's daily workflow.</p>
+        <div class="case-hero-bottom"><span>Employer project · FIS</span><span>Solo engineering delivery</span><span>Internal production platform</span></div>
+        <div class="case-facts" role="group" aria-label="Platform scope"><div><strong>30+</strong><span>self-service tools</span></div><div><strong>35</strong><span>read-only cloud collectors</span></div><div><strong>28</strong><span>registered incident functions</span></div></div>
+      </section>
+
+      <section class="case-section case-overview" id="overview" aria-labelledby="overview-title">
+        <div class="container case-section-grid">
+          <div class="case-rail"><p class="section-number">01 / Why it mattered</p><h2 id="overview-title">Three recurring problems. One deliberate system.</h2></div>
+          <div class="case-body">
+            <p class="case-intro">The work began with a practical observation: engineers had to gather context, run routine actions, and investigate incidents in different places. I built a platform around those three connected jobs.</p>
+            <div class="problem-list">
+              <div><span>01</span><h3>Infrastructure knowledge</h3><p>Manually maintained documentation made it hard to find a dependable view of the current AWS and Azure environment.</p></div>
+              <div><span>02</span><h3>Operational work</h3><p>Routine administration relied on direct server access and scripts that were difficult to discover, standardize, and audit.</p></div>
+              <div><span>03</span><h3>Incident triage</h3><p>Engineers gathered Windows and cloud evidence from several consoles before they could form a useful diagnosis.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section case-platform" id="platform" aria-labelledby="platform-title">
+        <div class="container">
+          <div class="case-heading"><p class="section-number">02 / The platform</p><h2 id="platform-title">A connected operating surface.</h2><p>PowerShell 7 and Pode provide the web and automation foundation. The browser interfaces connect three capabilities while keeping their responsibilities clear.</p></div>
+          <figure class="platform-map" aria-labelledby="map-caption">
+            <div class="map-entry"><span>Interface</span><strong>Authenticated browser interfaces</strong><small>Search · self-service tools · AI conversation</small></div>
+            <div class="map-connector" aria-hidden="true"></div>
+            <div class="map-core"><span>Application layer</span><strong>PowerShell 7 + Pode</strong><small>Authentication · forms · APIs · execution · audit</small></div>
+            <div class="map-connector" aria-hidden="true"></div>
+            <div class="map-pillars">
+              <div><span>01 / Know</span><strong>Cloud documentation</strong><small>Read-only AWS + Azure collection</small></div>
+              <div><span>02 / Act</span><strong>Tools Portal</strong><small>Guarded PowerShell workflows</small></div>
+              <div><span>03 / Investigate</span><strong>Azure AI Foundry</strong><small>Grounded investigation + Q&amp;A</small></div>
+            </div>
+            <figcaption id="map-caption">Conceptual view of the platform's capabilities; it omits private environment details.</figcaption>
+          </figure>
+          <div class="pillar-detail-grid">
+            <section aria-labelledby="docs-title"><p class="pillar-kicker">Pillar 01 / Know</p><h3 id="docs-title">Documentation generated from the estate.</h3><p>Read-only collectors use AWS CLI and Microsoft Graph to produce JSON and Markdown records. The documentation portal adds in-memory search, resource views, and diagrams so engineers can find context without relying on an individual's memory.</p><p>The same structured records provide a grounding corpus for the platform's AI agents. A refresh updates the knowledge base from the source systems.</p></section><section aria-labelledby="tools-title"><p class="pillar-kicker">Pillar 02 / Act</p><h3 id="tools-title">Tools that meet engineers where they work.</h3><p>The Tools Portal presents operational PowerShell tools through forms generated from each tool's manifest. New tools can be discovered without changing the portal interface.</p><p>Actions run in the authenticated user's context. Confirmation gates protect changes, while execution history and audit records make work traceable.</p></section>
+            <section aria-labelledby="agents-title"><p class="pillar-kicker">Pillar 03 / Investigate</p><h3 id="agents-title">AI grounded in operational evidence.</h3><p>An incident investigation agent on Azure AI Foundry Agent Service assembles Windows and AWS evidence before asking a model to analyze it. A second assistant answers infrastructure questions from generated documentation.</p><p>The design keeps evidence collection under program control and treats model output as an analysis to verify, with citations and explicit uncertainty.</p></section>
+          </div>
+          <figure class="interface-example" aria-labelledby="tools-example-caption">
+            <div class="interface-head"><span>OpsBridge / Tools</span><span>Illustrative interface</span></div>
+            <div class="interface-content"><div class="interface-side"><strong>Manifest-driven tools</strong><span>Account checks</span><span class="selected">Service health</span><span>Maintenance</span></div><div class="interface-main"><p class="interface-kicker">01 / Request</p><h3>Service health check</h3><p class="interface-muted">A tool manifest defines the fields and policy shown to an authenticated engineer.</p><div class="mock-field"><span>Target</span><strong>sample-server-01</strong></div><div class="mock-field"><span>Scope</span><strong>Read-only diagnostics</strong></div><div class="mock-flow"><span>Request</span><i aria-hidden="true">→</i><span>Review</span><i aria-hidden="true">→</i><span>Execution + audit</span></div></div></div>
+            <figcaption id="tools-example-caption">Illustrative interface using synthetic content. This shows the manifest-driven request, review, and audit workflow; it is not a production screenshot.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section case-investigation" id="investigation" aria-labelledby="investigation-title">
+        <div class="container case-section-grid">
+          <div class="case-rail"><p class="section-number">03 / The AI workflow</p><h2 id="investigation-title">Evidence first. Analysis second.</h2><p class="case-aside">The investigation agent was the hardest part to get right: useful output depended on collecting the right evidence and refusing unsupported certainty.</p></div>
+          <div class="case-body">
+            <ol class="investigation-steps">
+              <li><span>01 / Route</span><h3>Classify without a model call</h3><p>A local router selects an incident domain and its evidence plan before Azure AI Foundry is involved.</p></li>
+              <li><span>02 / Collect</span><h3>Gather evidence in parallel</h3><p>Registered collectors inspect relevant Windows state through WinRM and AWS telemetry through cloud APIs. The platform records successful, partial, and failed collection.</p></li>
+              <li><span>03 / Analyze</span><h3>Give the model a bounded task</h3><p>The Foundry agent receives the collected evidence and produces a structured summary, likely cause, and recommended next steps within a limit of two model calls per investigation.</p></li>
+              <li><span>04 / Verify</span><h3>Check citations and confidence</h3><p>Claims must cite evidence actually collected. Coverage across identity, current state, timeline, and changes limits confidence when evidence is incomplete or targets are unresolved.</p></li>
+            </ol>
+            <div class="case-callout"><span>Learning loop</span><p>Confirmed root-cause analyses can be archived with deduplication for retrieval in later investigations. Generated cloud documentation supplies the other part of the grounded knowledge base.</p></div>
+          </div>
+        </div>
+        <div class="container">
+          <figure class="interface-example report-example" aria-labelledby="report-example-caption">
+            <div class="interface-head"><span>OpsBridge / Investigation</span><span>Illustrative interface</span></div>
+            <div class="report-layout"><div><p class="interface-kicker">Synthetic incident report</p><h3>Service unavailable on sample-server-01</h3><p class="interface-muted">Collected evidence informs a finding that an engineer can inspect before taking action.</p><div class="report-finding"><span>Finding</span><p>The service is stopped and a recent configuration change was recorded. A change-related failure is possible; verify the timeline before acting. <b>[E101] [E102]</b></p></div><div class="report-finding"><span>Coverage and confidence</span><p>Current state and recent changes were collected. Timeline evidence is partial, so confidence is limited and further verification is recommended.</p></div></div><aside class="report-evidence" aria-label="Synthetic evidence references"><strong>Evidence references</strong><p><b>E101</b> Service state: stopped</p><p><b>E102</b> Recent change: sample configuration update</p><p><b>E103</b> Timeline: partial collection</p></aside></div>
+            <figcaption id="report-example-caption">Illustrative interface using synthetic evidence IDs and sample content. Findings are recommendations for engineer review, not autonomous remediation or a measured incident outcome.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section case-engineering" id="engineering" aria-labelledby="engineering-title">
+        <div class="container">
+          <div class="case-heading"><p class="section-number">04 / Engineering ownership</p><h2 id="engineering-title">Built across the full stack. Operated with care.</h2><p>As the solo engineer, I worked from architecture and interface design through cloud integration, agent behavior, testing, and day-to-day operation.</p></div>
+          <div class="engineering-grid">
+            <div><span>Architecture</span><p>PowerShell services, Pode web interfaces, API routes, browser interactions, and file-based JSON/Markdown storage.</p></div>
+            <div><span>Cloud integration</span><p>Read-only AWS and Azure collection, Windows diagnostics, and Azure AI Foundry Agent Service.</p></div>
+            <div><span>Security</span><p>AD authentication, per-user execution, DPAPI-protected secrets, confirmation gates, and audit trails.</p></div>
+            <div><span>Quality</span><p>Offline Pester contract tests for evidence envelopes, function dispatch, citation integrity, confidence policy, and persistence.</p></div>
+            <div><span>Operations</span><p>Auto-start, health checks, structured logging, and recovery paths for the internal production service.</p></div>
+            <div><span>Cost discipline</span><p>Local routing and evidence collection before model analysis, with explicit limits on calls and operation budgets.</p></div>
+          </div>
+          <div class="case-outcome"><p class="section-number">What changed</p><h3>Cloud context, routine action, and incident analysis now share a more coherent workflow.</h3><p>The platform gives engineers searchable documentation, guarded self-service tools, and evidence-backed incident reports in one connected system.</p></div>
+        </div>
+      </section>
+
+      <section class="case-section case-decisions" id="decisions" aria-labelledby="decisions-title">
+        <div class="container case-section-grid">
+          <div class="case-rail"><p class="section-number">05 / Engineering decisions</p><h2 id="decisions-title">Trade-offs made explicit.</h2><p class="case-aside">These choices fit an internal operations platform. They also define what I would revisit as usage and requirements change.</p></div>
+          <div class="case-body"><div class="decision-list">
+            <div><h3>Lightweight local storage</h3><p>JSON and Markdown files kept deployment simple and made generated documentation inspectable. Greater concurrency or multi-instance scaling would call for a database and stronger transaction handling.</p></div>
+            <div><h3>Deterministic collection before model analysis</h3><p>Local routing and parallel collectors gather relevant evidence before bounded Foundry calls. This controls cost and makes the inputs reviewable, but the chosen evidence plan can miss an unfamiliar failure mode.</p></div>
+            <div><h3>Uncertainty stays visible</h3><p>Partial collection or unresolved targets lower confidence and require engineer verification. Cited findings and recommendations support diagnosis; they do not trigger autonomous remediation.</p></div>
+            <div><h3>Tests validate contracts</h3><p>Offline Pester tests cover evidence shape, dispatch, citations, and confidence rules. Passing them does not guarantee that a model's proposed root cause is correct in a live incident.</p></div>
+          </div></div>
+        </div>
+      </section>
+
+      <section class="case-next container" aria-labelledby="next-title"><div><p class="section-number">Continue exploring</p><h2 id="next-title">More infrastructure work.</h2><p>See the broader project stories and career experience behind this platform.</p></div><a class="button button-primary" href="../../index.html#projects">Back to selected projects <span aria-hidden="true">↗</span></a></section>
+    </article>
+  </main>
+
+  <dialog class="explore-dialog" aria-labelledby="explore-title"><div class="dialog-header"><div><span class="section-number">Quick navigation</span><h2 id="explore-title">Explore the portfolio</h2></div><button class="dialog-close" type="button" aria-label="Close explore dialog">✕</button></div><label for="explore-search">Find a section or project</label><input id="explore-search" type="search" autocomplete="off" placeholder="Search projects, skills, experience…"><p class="search-hint">Use ↑ ↓ to choose, Enter to open, Esc to close</p><p class="visually-hidden explore-status" role="status" aria-live="polite"></p><div class="explore-results" id="explore-results"></div><p class="explore-empty" hidden>No matching sections or projects.</p></dialog>
+  <footer class="site-footer"><div class="container footer-inner"><div><strong>Nataraj V. D.</strong><span>Bangalore, India</span></div><div class="footer-links"><a href="mailto:natarajvd@gmail.com">Email <span aria-hidden="true">↗</span></a><a href="../../index.html">Portfolio home ↑</a></div></div></footer>
+</body>
+</html>
